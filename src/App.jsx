@@ -6,6 +6,7 @@ import ProductsPage from './pages/ProductsPage';
 import ProductDetailPage from './pages/ProductDetailPage';
 import FindUsPage from './pages/FindUsPage';
 import StoryPage from './pages/OurStoryPage';
+import SkinTestPage from './pages/SkinTestPage';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -21,6 +22,8 @@ export default function App() {
         return <ProductDetailPage product={selectedProduct} setCurrentPage={setCurrentPage} />;
       case 'story':
         return <StoryPage />;
+      case 'skin-test':
+        return <SkinTestPage setCurrentPage={setCurrentPage} />;
       case 'find-us':
         return <FindUsPage />;
       default:

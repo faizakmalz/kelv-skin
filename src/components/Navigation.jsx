@@ -69,6 +69,13 @@ export default function Navigation({ currentPage, setCurrentPage }) {
               )}
             </div>
 
+             <button 
+                onClick={() => handleNavigation('skin-test')}
+                className={`${currentPage === 'skin-test' ? 'text-white font-bold' : 'text-white'} hover:text-forest-500 font-bold transition font-medium`}
+              >
+                Skin Test
+            </button>
+
             <button 
               onClick={() => handleNavigation('story')}
               className={`${currentPage === 'story' ? 'text-white font-bold' : 'text-white'} hover:text-forest-500 font-bold transition font-medium`}
@@ -76,12 +83,12 @@ export default function Navigation({ currentPage, setCurrentPage }) {
               Our Story
             </button>
             
-            <button 
+            {/* <button 
               onClick={() => handleNavigation('find-us')}
               className={`${currentPage === 'find-us' ? 'text-white font-bold' : 'text-white'} hover:text-forest-500 font-bold transition font-medium`}
             >
               Find Us
-            </button>
+            </button> */}
           </div>
 
           {/* Icons */}
@@ -100,7 +107,7 @@ export default function Navigation({ currentPage, setCurrentPage }) {
 
           {/* Mobile Menu Button */}
           <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMenuOpen ? <X className="w-6 h-6 text-white" /> : <Menu className="w-6 h-6 text-white" />}
           </button>
         </div>
       </div>
@@ -122,17 +129,23 @@ export default function Navigation({ currentPage, setCurrentPage }) {
               Products
             </button>
             <button 
+              onClick={() => handleNavigation('skin-test')}
+              className="block w-full text-left text-stone-700 hover:text-emerald-800"
+            >
+              Skin Test
+            </button>
+            <button 
               onClick={() => handleNavigation('story')}
               className="block w-full text-left text-stone-700 hover:text-forest-800"
             >
               Our Story
             </button>
-            <button 
+            {/* <button 
               onClick={() => handleNavigation('find-us')}
               className="block w-full text-left text-stone-700 hover:text-forest-800"
             >
               Find Us
-            </button>
+            </button> */}
           </div>
         </div>
       )}

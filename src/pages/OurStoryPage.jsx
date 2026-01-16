@@ -16,10 +16,12 @@ export default function StoryPage() {
                 Perjalanan dari limbah organik menjadi produk ramah lingkungan yang memberdayakan perempuan Indonesia
               </p>
             </div>
-            <div className="relative h-[400px] md:h-[500px]">
-              <div className="absolute inset-0 bg-gradient-to-br from-emerald-200 to-amber-200 flex items-center justify-center">
-                <div className="text-9xl">🌍</div>
-              </div>
+             <div className="relative h-[400px] md:h-[500px]">
+              <img 
+                src="images/ourstory.png" 
+                alt="Sustainable Earth and Environment"
+                className="absolute inset-0 w-full h-full object-contain rounded lg shadow-lg"
+              />
             </div>
           </div>
         </div>
@@ -39,11 +41,14 @@ export default function StoryPage() {
                 Berangkat dari pemanfaatan kulit buah sebagai bahan baku eco enzyme, Kelv Skin mengembangkan produk turunan yang berorientasi pada keberlanjutan, kualitas, dan nilai guna melalui proses yang dijalankan bersama komunitas perempuan dan generasi muda secara edukatif dan kolaboratif.
               </p>
             </div>
-            <div className="relative h-80 rounded-3xl overflow-hidden shadow-xl">
-              <div className="absolute inset-0 bg-gradient-to-br from-emerald-100 to-amber-100 flex items-center justify-center">
-                <div className="text-8xl">🌿</div>
-              </div>
+            <div className="relative h-[400px] md:h-[500px] shadow-lg rounded-lg overflow-hidden">
+              <img 
+                src="images/foto owner.jpg" 
+                alt="Sustainable Earth and Environment"
+                className="absolute inset-0 w-full h-full object-cover rounded-lg shadow-lg"
+              />
             </div>
+
           </div>
 
           {/* Mission Section */}

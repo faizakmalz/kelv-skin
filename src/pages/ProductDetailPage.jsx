@@ -32,7 +32,7 @@ export default function ProductDetailPage({ product, setCurrentPage }) {
         <div className="grid md:grid-cols-2 gap-12">
           {/* Product Image */}
           <div className="bg-gradient-to-br from-emerald-100 to-amber-100 rounded-3xl h-96 md:h-full flex items-center justify-center sticky top-24">
-            <span className="text-9xl">{product.image}</span>
+            <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
           </div>
 
           {/* Product Info */}
