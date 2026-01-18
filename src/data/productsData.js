@@ -52,14 +52,15 @@ export const products = [
   },
   {
     id: 5,
-    name: "Gel Shower",
-    category: "body-care",
-    categoryName: "Eco Body Care",
-    benefits: "Membersihkan tubuh dengan formula eco enzyme yang lembut",
-    image: "/images/gel shower.jpg",
-    price: "Rp 75.000",
-    sizes: ["300ml", "500ml"],
-    description: "Gel shower dengan formula eco enzyme untuk pengalaman mandi yang natural."
+    name: "Facial Gel Cleanser",
+    category: "skin-care",
+    categoryName: "Skin Care",
+    benefits: "Membersihkan Wajah Dengan Lembut Membantu Menjaga Kelembapan Alami Kulit Membantu Menenangkan Kulit Yang Terasa Tidak Nyaman Kulit Terasa Bersih, Lembut, Dan Segar Setelah Pemakaian",
+    image: "/images/facial gel cleanser.png",
+    price: "Rp 60.000",
+    sizes: ["100ml"],
+    ingredients: "Butterfly Pea Extract, Cocamidopropyl Betaine, Decyl Glucoside, Xanthan Gum, Glycerin, Oat Extract, Distilled Water, Eco Enzyme, Lacto Milk, Mango Butter, Cetyl Alcohol, Germall Plus, Sweet Almond Oil, Polawax, Lavender Essential Oil",
+    description: "Memiliki aroma bunga mawar yang kuat dan berkarakter, memberikan kesan mewah dan bold."
   },
 
   // Home Care
@@ -104,6 +105,42 @@ export const products = [
     description: "Kulit terasa halus dan lembut setelah dibersihkan."
   },
   {
+    id: 11,
+    name: "Face Wash Bare Hug",
+    category: "skin-care",
+    categoryName: "Skin Care",
+    benefits: "Membersihkan Wajah Dari Kotoran Dan Minyak BerlebihMembantu Menjaga Kebersihan Kulit Wajah Kulit Terasa Bersih Dan Segar Cocok Untuk Penggunaan Harian",
+    image: "/images/face wash bare hug.jpeg",
+    price: "Rp 35.000",
+    sizes: ["50gr"],
+    ingredients: "Olive Oil, Coconut Oil, Sodium Hidroksida, Eco Enzyme, Fermentasi Daun Sirih.",
+    description: "Kulit terasa halus dan lembut setelah dibersihkan."
+  },
+  {
+    id: 12,
+    name: "Face Wash Calm Sunny",
+    category: "skin-care",
+    categoryName: "Skin Care",
+    benefits: "Membersihkan Wajah Dan Memberikan Sensasi Segar Kulit Terasa Lebih Cerah Setelah Pemakaian Membantu Mengurangi Minyak Berlebih Kulit Terasa Lebih Nyaman Setelah Dibersihkan",
+    image: "/images/face wash sunny.jpeg",
+    price: "Rp 35.000",
+    sizes: ["50gr"],
+    ingredients: "Olive Oil, Coconut Oil, Palm Oil, Castor Oil, Sodium Hidroksida, Eco Enzyme, Sereh, Lidah Buaya, Estensial Oil, Fermentasi Daun Sirih.",
+    description: "Kulit terasa halus dan lembut setelah dibersihkan."
+  },
+  {
+    id: 13,
+    name: "Face Wash Midnight Bloom",
+    category: "skin-care",
+    categoryName: "Skin Care",
+    benefits:"Membersihkan Wajah Secara Menyeluruh Membantu Mengangkat Kotoran Dan Minyak Berlebih Kulit Terasa Bersih Dan Tidak Licin Setelah Pemakaian",
+    image: "/images/face wash midnight.jpeg",
+    price: "Rp 35.000",
+    sizes: ["50gr"],
+    ingredients: "Olive Oil, Coconut Oil, Sunflower Oil, Palm Oil, Avocado Oil, Castor Oil, Sodium Hidroksida, Eco Enzyme, Charcoal, Lidah Buaya, Madu, Essential Oil",
+    description: "Kulit terasa halus dan lembut setelah dibersihkan."
+  },
+  {
     id: 9,
     name: "Moisturizer Daily Nourish",
     category: "skin-care",
@@ -115,17 +152,6 @@ export const products = [
     ingredients: "Sweet Almond Oil, Olive Oil, Mango Butter, Pulawak, Cetyl Alcohol, Eco Enzyme, Aloe Vera Extract, Aqua, Germall Plus, Essential Oil, Argan Oil",
     description: "Cocok untuk kulit normal hingga kering, memberikan nutrisi optimal."
   },
-  {
-    id: 10,
-    name: "Moisturizer",
-    category: "skin-care",
-    categoryName: "Skin Care",
-    benefits: "Melembapkan dan menutrisi kulit dengan formula ringan",
-    image: "/images/moisturizer.png",
-    price: "Rp 95.000",
-    sizes: ["50ml"],
-    description: "Moisturizer dengan formula eco enzyme untuk kulit sehat dan lembap."
-  }
 ];
 
 // Helper function to get products by category

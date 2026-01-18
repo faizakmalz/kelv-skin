@@ -13,14 +13,27 @@ const skinTypes = {
       "Mudah keriput"
     ],
     recommendations: [
-      "Moisturizer Daily Nourish",
-      "Face Wash Lacto Rice",
-      "Gel Shower Parijis Van Bali"
+      {
+        id: 1,
+        name: "Bare Hug",
+        reason: "Memberikan hidrasi intensif dan menutrisi kulit kering"
+      },
+      {
+        id: 8,
+        name: "Lacto Rice",
+        reason: "Membersihkan tanpa membuat kulit lebih kering"
+      },
+      {
+        id: 2,
+        name: "Facial Gel Cleanser With Oat Ekstrak",
+        reason: "Formula lembut dengan ekstrak oat untuk kulit kering"
+      }
     ],
     tips: [
-      "Gunakan moisturizer setiap hari",
-      "Hindari sabun dengan alkohol tinggi",
-      "Minum air putih minimal 2L per hari"
+      "Gunakan moisturizer setiap hari, terutama setelah mandi",
+      "Hindari sabun dengan alkohol tinggi atau SLS keras",
+      "Minum air putih minimal 2L per hari untuk hidrasi dari dalam",
+      "Gunakan produk dengan bahan alami seperti eco enzyme"
     ]
   },
   berminyak: {
@@ -34,14 +47,22 @@ const skinTypes = {
       "Makeup mudah luntur"
     ],
     recommendations: [
-      "Face Wash Sunny Calm",
-      "Gel Shower Osaka",
-      "Facial Gel Cleanser With Oat"
+      {
+        id: 3,
+        name: "Midnight Bloom",
+        reason: "Membersihkan minyak berlebih dengan aroma stress relief"
+      },
+      {
+        id: 4,
+        name: "Sunny Calm",
+        reason: "Aroma lemon segar yang membantu kontrol minyak"
+      }
     ],
     tips: [
-      "Cuci muka 2x sehari",
-      "Gunakan oil-free moisturizer",
-      "Hindari produk yang terlalu berat"
+      "Cuci muka 2x sehari dengan cleanser yang lembut",
+      "Gunakan moisturizer oil-free atau water-based",
+      "Hindari produk yang terlalu berat atau comedogenic",
+      "Gunakan toner untuk mengontrol sebum"
     ]
   },
   kombinasi: {
@@ -55,14 +76,27 @@ const skinTypes = {
       "Tekstur tidak merata"
     ],
     recommendations: [
-      "Face Wash Midnight Bloom",
-      "Moisturizer Daily Nourish",
-      "Gel Shower Hangzhou"
+      {
+        id: 4,
+        name: "Sunny Calm",
+        reason: "Formula seimbang dengan cherry blossom extract"
+      },
+      {
+        id: 8,
+        name: "Lacto Rice",
+        reason: "Hidrasi optimal tanpa membuat T-zone makin berminyak"
+      },
+      {
+        id: 2,
+        name: "Facial Gel Cleanser With Oat Ekstrak",
+        reason: "Mencerahkan dan menyeimbangkan kondisi kulit"
+      }
     ],
     tips: [
-      "Gunakan produk berbeda untuk area berbeda",
-      "Focus hydration pada area kering",
-      "Kontrol minyak di T-zone"
+      "Gunakan produk berbeda untuk area berbeda jika perlu",
+      "Focus hydration pada area kering (pipi)",
+      "Kontrol minyak di T-zone dengan cleanser yang tepat",
+      "Pakai moisturizer ringan yang cepat menyerap"
     ]
   },
   normal: {
@@ -76,14 +110,22 @@ const skinTypes = {
       "Tekstur halus"
     ],
     recommendations: [
-      "Face Wash Bare Hug",
-      "Gel Shower Siena",
-      "Moisturizer Daily Nourish"
+      {
+        id: 8,
+        name: "Lacto Rice",
+        reason: "Aroma segar yang cocok untuk maintenance rutin"
+      },
+      {
+        id: 2,
+        name: "Facial Gel Cleanser With Oat Ekstrak",
+        reason: "Menjaga keseimbangan dan kesehatan kulit"
+      }
     ],
     tips: [
-      "Pertahankan rutinitas skincare konsisten",
-      "Lindungi dari sinar matahari",
-      "Hidrasi cukup"
+      "Pertahankan rutinitas skincare yang konsisten",
+      "Lindungi kulit dari sinar matahari dengan SPF",
+      "Hidrasi cukup dengan minum air putih",
+      "Gunakan produk natural untuk maintenance"
     ]
   },
   sensitif: {
@@ -97,14 +139,27 @@ const skinTypes = {
       "Sering panas/iritasi"
     ],
     recommendations: [
-      "Gel Shower Parijis Van Bali",
-      "Face Wash Lacto Rice",
-      "Moisturizer Daily Nourish"
+      {
+        id: 1,
+        name: "Gel Shower Parijis Van Bali",
+        reason: "Formula paling gentle dengan lavender menenangkan"
+      },
+      {
+        id: 8,
+        name: "Face Wash Lacto Rice",
+        reason: "Bahan natural yang lembut untuk kulit sensitif"
+      },
+      {
+        id: 9,
+        name: "Moisturizer Daily Nourish",
+        reason: "Bebas bahan keras, cocok untuk kulit mudah iritasi"
+      }
     ],
     tips: [
-      "Patch test produk baru",
-      "Hindari fragrance keras",
-      "Gunakan produk hypoallergenic"
+      "Selalu patch test produk baru di belakang telinga",
+      "Hindari produk dengan fragrance atau pewangi keras",
+      "Gunakan produk hypoallergenic dan natural",
+      "Konsultasi dengan dokter kulit jika iritasi terus terjadi"
     ]
   }
 };
@@ -166,7 +221,7 @@ const questions = [
   }
 ];
 
-export default function SkinTestPage({ setCurrentPage }) {
+export default function SkinTestPage({ setCurrentPage, setSelectedProduct }) {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState({});
   const [showResult, setShowResult] = useState(false);
@@ -191,6 +246,13 @@ export default function SkinTestPage({ setCurrentPage }) {
     if (currentQuestion > 0) {
       setCurrentQuestion(prev => prev - 1);
     }
+  };
+
+  const handleProductClick = (productId) => {
+    // Import products from productsData if available
+    // For now, navigate to products page with filter
+    setCurrentPage('products');
+    window.scrollTo(0, 0);
   };
 
   const calculateResult = () => {
@@ -289,14 +351,29 @@ export default function SkinTestPage({ setCurrentPage }) {
             </h3>
             <div className="space-y-4">
               {result.recommendations.map((product, idx) => (
-                <div key={idx} className="flex items-center gap-4 p-4 bg-emerald-50 rounded-xl hover:bg-emerald-100 transition">
-                  <div className="w-12 h-12 bg-emerald-200 rounded-full flex items-center justify-center text-2xl">
+                <button
+                  key={idx}
+                  onClick={() => handleProductClick(product.id)}
+                  className="w-full flex items-start gap-4 p-4 bg-emerald-50 rounded-xl hover:bg-emerald-100 hover:shadow-md transition group text-left"
+                >
+                  <div className="w-12 h-12 bg-emerald-200 rounded-full flex items-center justify-center text-2xl flex-shrink-0 group-hover:scale-110 transition">
                     🧴
                   </div>
-                  <span className="font-semibold text-stone-800">{product}</span>
-                </div>
+                  <div className="flex-1">
+                    <p className="font-bold text-stone-800 mb-1 group-hover:text-emerald-800 transition">
+                      {product.name}
+                    </p>
+                    <p className="text-sm text-stone-600">
+                      {product.reason}
+                    </p>
+                  </div>
+                  <ArrowRight className="w-5 h-5 text-emerald-800 opacity-0 group-hover:opacity-100 transition flex-shrink-0 mt-1" />
+                </button>
               ))}
             </div>
+            <p className="text-sm text-stone-500 text-center mt-6">
+              💡 Klik produk untuk melihat detail lengkap
+            </p>
           </div>
 
           {/* Tips */}
@@ -380,7 +457,7 @@ export default function SkinTestPage({ setCurrentPage }) {
                 onClick={() => handleAnswer(currentQ.id, option)}
                 className={`w-full text-left p-6 rounded-xl border-2 transition transform hover:scale-105 ${
                   answers[currentQ.id]?.id === option.id
-                    ? 'border-emerald-800 bg-emerald-50 shadow-lg'
+                                      ? 'border-emerald-800 bg-emerald-50 shadow-lg'
                     : 'border-stone-200 bg-white hover:border-emerald-300'
                 }`}
               >

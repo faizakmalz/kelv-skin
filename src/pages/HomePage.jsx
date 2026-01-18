@@ -137,7 +137,7 @@ export default function HomePage({ setCurrentPage, setSelectedProduct }) {
                     <Heart className="w-5 h-5 text-forest-700" />
                   </div>
                   <div className="text-left">
-                    <p className="text-xs text-white uppercase">BPOM</p>
+                    <p className="text-xs text-white uppercase">SIG</p>
                     <p className="text-sm font-semibold text-white">Certified</p>
                   </div>
                 </div>
@@ -188,9 +188,9 @@ export default function HomePage({ setCurrentPage, setSelectedProduct }) {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Image Side */}
-            <div className="relative h-96 md:h-[500px] rounded-3xl overflow-hidden shadow-2xl">
+            <div className="relative h-[800px] md:h-[800px] rounded-3xl overflow-hidden shadow-2xl">
               <img 
-                src="/images/model moisturizer.png" 
+                src="/images/gel shower.jpg" 
                 alt="Woman with natural skincare"
                 className="w-full h-full object-cover"
               />
@@ -246,9 +246,87 @@ export default function HomePage({ setCurrentPage, setSelectedProduct }) {
                   <div className="text-forest-800 mb-3 flex justify-center">
                     <Users className="w-8 h-8" />
                   </div>
-                  <h3 className="font-bold text-forest-800 mb-2">BPOM</h3>
-                  <p className="text-sm text-forest-800">Terdaftar resmi di BPOM</p>
+                  <h3 className="font-bold text-forest-800 mb-2">SIG</h3>
+                  <p className="text-sm text-forest-800">Terdaftar resmi di SIG</p>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-gradient-to-br from-emerald-50 to-amber-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="bg-white rounded-3xl overflow-hidden shadow-2xl">
+            <div className="grid md:grid-cols-2 gap-0">
+              {/* Left - Image */}
+              <div className="relative h-64 md:h-auto rounded-3xl">
+                <img 
+                  src="images/model moisturizer.png" 
+                  alt="Skin Test"
+                  className="w-full h-full object-cover rounded-3xl"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-forest-800 to-transparent opacity-60"></div>
+                
+                {/* Floating Badge */}
+                <div className="absolute top-6 left-6 bg-white rounded-2xl p-4 shadow-xl">
+                  <div className="flex items-center gap-3">
+                    <div className="text-3xl">🔍</div>
+                    <div>
+                      <p className="text-sm font-bold text-stone-800">Gratis</p>
+                      <p className="text-xs text-stone-600">2 menit</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right - Content */}
+              <div className="p-8 md:p-12 flex flex-col justify-center bg-gradient-to-br from-white to-stone-50">
+                <span className="inline-block text-xs font-bold text-emerald-800 uppercase tracking-widest mb-4 bg-emerald-100 px-4 py-2 rounded-full w-fit">
+                  Personalized Recommendation
+                </span>
+                
+                <h2 className="text-3xl md:text-4xl font-bold text-stone-800 mb-4 leading-tight">
+                  Belum Tahu Jenis Kulit Kamu?
+                </h2>
+                
+                <p className="text-lg text-stone-600 mb-6 leading-relaxed">
+                  Ikuti tes kulit gratis kami dan dapatkan rekomendasi produk yang tepat untuk kulitmu. Hanya 6 pertanyaan simple!
+                </p>
+
+                {/* Features */}
+                <div className="space-y-3 mb-8">
+                  <div className="flex items-center gap-3">
+                    <div className="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-emerald-800 text-xs">✓</span>
+                    </div>
+                    <span className="text-stone-700">Hasil akurat berdasarkan kondisi kulitmu</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-emerald-800 text-xs">✓</span>
+                    </div>
+                    <span className="text-stone-700">Rekomendasi produk yang sesuai</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-emerald-800 text-xs">✓</span>
+                    </div>
+                    <span className="text-stone-700">Tips perawatan khusus untuk jenis kulitmu</span>
+                  </div>
+                </div>
+
+                {/* CTA Button */}
+                <button
+                  onClick={() => setCurrentPage('skin-test')}
+                  className="bg-forest-800 text-stone-50 px-8 py-4 rounded-full text-lg font-semibold hover:bg-emerald-900 transition transform hover:scale-105 shadow-lg w-full md:w-auto"
+                >
+                  Mulai Tes Sekarang →
+                </button>
+
+                <p className="text-xs text-stone-500 mt-4">
+                  ✨ Sudah dipercaya oleh 1000+ pengguna
+                </p>
               </div>
             </div>
           </div>
