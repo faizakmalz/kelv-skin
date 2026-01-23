@@ -262,7 +262,7 @@ export default function HomePage({ setCurrentPage, setSelectedProduct }) {
               {/* Left - Image */}
               <div className="relative h-64 md:h-auto rounded-3xl">
                 <img 
-                  src="images/model moisturizer.png" 
+                  src="images/model face wash.png" 
                   alt="Skin Test"
                   className="w-full h-full object-cover rounded-3xl"
                 />
