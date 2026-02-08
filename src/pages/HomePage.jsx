@@ -113,19 +113,19 @@ export default function HomePage({ setCurrentPage, setSelectedProduct }) {
                 >
                   Shop Now
                 </button>
-                <button 
-                  onClick={() => setCurrentPage('story')}
-                  className="bg-white text-forest-800  px-8 py-4 rounded-full text-lg font-semibold hover:bg-forest-50 transition"
+                <a 
+                  href='https://wa.me/62881026986577?text=Halo%20saya%20ingin%20konsultasi%20lanjutan%20terkait%20pengisian%20survey%20jenis%20kulit'
+                  className=" text-center bg-white text-forest-800  px-8 py-4 rounded-full text-lg font-semibold hover:bg-forest-50 transition"
                 >
                   Learn More
-                </button>
+                </a>
               </div>
               
               {/* Trust Badges */}
               <div className="flex gap-6 mt-12 flex-wrap">
                 <div className="flex items-center gap-2">
-                  <div className="w-10 h-10 bg-beige-200 rounded-full flex items-center justify-center">
-                    <Leaf className="w-5 h-5 text-forest-700" />
+                  <div className="w-8 h-8 md:w-10 md:h-10 bg-beige-200 rounded-full flex items-center justify-center">
+                    <Leaf className="w-3 h-3 md:w-5 md:h-5 text-forest-700" />
                   </div>
                   <div className="text-left">
                     <p className="text-xs text-white uppercase">100%</p>
@@ -133,8 +133,8 @@ export default function HomePage({ setCurrentPage, setSelectedProduct }) {
                   </div>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className="w-10 h-10 bg-beige-200 rounded-full flex items-center justify-center">
-                    <Heart className="w-5 h-5 text-forest-700" />
+                  <div className="w-8 h-8 md:w-10 md:h-10 bg-beige-200 rounded-full flex items-center justify-center">
+                    <Heart className="w-3 h-3 md:w-5 md:h-5 text-forest-700" />
                   </div>
                   <div className="text-left">
                     <p className="text-xs text-white uppercase">SIG</p>
@@ -142,8 +142,8 @@ export default function HomePage({ setCurrentPage, setSelectedProduct }) {
                   </div>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className="w-10 h-10 bg-beige-200 rounded-full flex items-center justify-center">
-                    <Sparkles className="w-5 h-5 text-text-forest-700" />
+                  <div className="w-8 h-8 md:w-10 md:h-10 bg-beige-200 rounded-full flex items-center justify-center">
+                    <Sparkles className="w-3 h-3 md:w-5 md:h-5 text-text-forest-700" />
                   </div>
                   <div className="text-left">
                     <p className="text-xs text-white uppercase">1000+</p>

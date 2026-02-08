@@ -321,7 +321,7 @@ export default function SkinTestPage({ setCurrentPage, setSelectedProduct }) {
               <h2 className="text-3xl font-bold mb-3">{result.name}</h2>
               <p className="text-lg opacity-90">{result.description}</p>
               {result.isSensitive && (
-                <div className="mt-4 bg-white bg-opacity-20 rounded-xl p-4">
+                <div className="mt-4 text-black bg-white bg-opacity-20 rounded-xl p-4">
                   <p className="font-semibold">⚠️ Perhatian: Kulit kamu cenderung sensitif (Level: {result.sensitivityLevel}/2)</p>
                 </div>
               )}
@@ -399,6 +399,12 @@ export default function SkinTestPage({ setCurrentPage, setSelectedProduct }) {
             >
               Lihat Produk Rekomendasi
             </button>
+            <a
+              href='https://wa.me/62881026986577?text=Halo%20saya%20ingin%20konsultasi%20lanjutan%20terkait%20pengisian%20survey%20jenis%20kulit'
+              className=" text-center bg-white text-emerald-800 border-2 border-emerald-800 px-8 py-4 rounded-full font-semibold hover:bg-emerald-50 transition"
+            >
+              Konsultasi Sekarang!
+            </a>
             <button
               onClick={restartTest}
               className="bg-white text-emerald-800 border-2 border-emerald-800 px-8 py-4 rounded-full font-semibold hover:bg-emerald-50 transition"
