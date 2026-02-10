@@ -209,21 +209,21 @@ export default function FindUsPage() {
             Dapatkan update terbaru, tips eco-friendly, dan promo eksklusif!
           </p>
           <div className="flex justify-center gap-6">
-            <a href="#" className="bg-gradient-to-br from-emerald-100 to-amber-100 hover:from-emerald-200 hover:to-amber-200 p-6 rounded-2xl transition transform hover:scale-110 shadow-md">
+            <a href="https://www.instagram.com/kelv.skin" target="_blank" className="bg-gradient-to-br from-emerald-100 to-amber-100 hover:from-emerald-200 hover:to-amber-200 p-6 rounded-2xl transition transform hover:scale-110 shadow-md">
               <span className="text-4xl">📷</span>
               <p className="text-sm font-medium text-stone-800 mt-2">Instagram</p>
             </a>
-            <a href="#" className="bg-gradient-to-br from-emerald-100 to-amber-100 hover:from-emerald-200 hover:to-amber-200 p-6 rounded-2xl transition transform hover:scale-110 shadow-md">
+            <a href="https://www.tiktok.com/@kelvnaturalcare" target="_blank" className="bg-gradient-to-br from-emerald-100 to-amber-100 hover:from-emerald-200 hover:to-amber-200 p-6 rounded-2xl transition transform hover:scale-110 shadow-md">
               <span className="text-4xl">📘</span>
-              <p className="text-sm font-medium text-stone-800 mt-2">Facebook</p>
+              <p className="text-sm font-medium text-stone-800 mt-2">Tiktok</p>
             </a>
-            <a href="#" className="bg-gradient-to-br from-emerald-100 to-amber-100 hover:from-emerald-200 hover:to-amber-200 p-6 rounded-2xl transition transform hover:scale-110 shadow-md">
+            <a href="https://wa.me/62881026986577" target="_blank" className="bg-gradient-to-br from-emerald-100 to-amber-100 hover:from-emerald-200 hover:to-amber-200 p-6 rounded-2xl transition transform hover:scale-110 shadow-md">
               <span className="text-4xl">💬</span>
               <p className="text-sm font-medium text-stone-800 mt-2">WhatsApp</p>
             </a>
-            <a href="#" className="bg-gradient-to-br from-emerald-100 to-amber-100 hover:from-emerald-200 hover:to-amber-200 p-6 rounded-2xl transition transform hover:scale-110 shadow-md">
+            <a href="https://shopee.co.id/KELV" target="_blank" className="bg-gradient-to-br from-emerald-100 to-amber-100 hover:from-emerald-200 hover:to-amber-200 p-6 rounded-2xl transition transform hover:scale-110 shadow-md">
               <span className="text-4xl">🐦</span>
-              <p className="text-sm font-medium text-stone-800 mt-2">Twitter</p>
+              <p className="text-sm font-medium text-stone-800 mt-2">Shopee</p>
             </a>
           </div>
         </div>

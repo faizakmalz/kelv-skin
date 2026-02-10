@@ -99,7 +99,7 @@ export default function ProductDetailPage({ product, setCurrentPage }) {
             </div>
 
             {/* Action Buttons */}
-            <div className="flex gap-4 mb-8">
+            <div className="flex gap-4 mb-8 text-center">
               <a href='https://wa.me/62881026986577?text=Halo%20saya%20ingin%20order%20(produk%20kelv)%20varian%20(nominal%20pembelian)' className="flex-1 bg-emerald-800 text-stone-50 py-4 rounded-full font-semibold hover:bg-emerald-900 transition shadow-lg">
                 Tambah ke Keranjang
               </a>
